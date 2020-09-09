@@ -1,4 +1,21 @@
-var swiper = new Swiper('.swiper-container', {
+
+
+const toItemPage = document.querySelectorAll('.toItemPage')
+const swiperImg = document.querySelectorAll('.swiper__image')
+
+toItemPage.forEach(el => {
+  el.addEventListener('click', () => {
+    document.location.href = '/servicesItemPage.html'
+  })
+})
+
+swiperImg.forEach(el => {
+  el.addEventListener('click', () => {
+    document.location.href = 'https://google.com'
+  })
+})
+
+new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   slidesPerView: 3,
@@ -30,19 +47,4 @@ var swiper = new Swiper('.swiper-container', {
       slidesPerView: 3,
     },
   }
-})
-
-const toItemPage = document.querySelectorAll('.toItemPage')
-const swiperImg = document.querySelectorAll('.swiper__image')
-
-toItemPage.forEach(el => {
-  el.addEventListener('click', () => {
-    document.location.href = '/servicesItemPage.html'
-  })
-})
-
-swiperImg.forEach(el => {
-  el.addEventListener('click', () => {
-    document.location.href = 'google.com'
-  })
 })
