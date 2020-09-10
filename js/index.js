@@ -5,7 +5,7 @@ const swiperImg = document.querySelectorAll('.swiper__image')
 
 toItemPage.forEach(el => {
   el.addEventListener('click', () => {
-    document.location.href = '/servicesItemPage.html'
+    document.location.href = 'servicesItemPage.html'
   })
 })
 
