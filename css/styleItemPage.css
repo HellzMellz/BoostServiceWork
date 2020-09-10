@@ -1,0 +1,516 @@
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+ol {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.header {
+  background-image: url(./../images/1.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.header__wrapper {
+  background: url(../images/dott.png) repeat 0px 0px;
+  background-size: 2px;
+  -webkit-background-size: 2px;
+  -moz-background-size: 2px;
+  -o-background-size: 2px;
+  -ms-background-size: 2px;
+  padding: 2em 0;
+}
+
+.agileits-logo {
+  text-align: center;
+}
+.agileits-logo h1 {
+  margin: 0;
+}
+.agileits-logo h1 a {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 6px;
+  padding: 0;
+}
+.agileits-logo h1 a span {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.serviceDesc__wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.breadcrumbs {
+  margin-top: 50px;
+}
+
+.breadcrumb-item {
+  font-size: 20px;
+}
+
+.breadcrumb-item a {
+  color: rgba(255, 191, 28, 1);
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.serviceDesc__itemBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.serviceDesc__otherItems {
+  flex-basis: 30%;
+  margin-right: 30px;
+}
+
+.serviceDesc__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.serviceDesc__list-item {
+  color: #fff;
+  padding: 15px 25px 15px 20px;
+  background-color: rgba(62, 55, 49, 0.8);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  transition: all 0.2s;
+  font-size: 18px;
+}
+
+.serviceDesc__list-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.serviceDesc__list-item:hover {
+  color: #fff;
+  background-color: rgba(79, 68, 50, 0.8);
+}
+
+.serviceDesc_description {
+  flex-basis: 40%;
+  margin-right: 30px;
+}
+
+.serviceDesc__name {
+  font-size: 42px;
+  color: #6c757d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.serviceDesc__subDescription {
+  font-family: "Roboto", sans-serif;
+}
+
+.serviceDesc__subDescription p,
+.serviceDesc__subDescription ul {
+  color: #898f9d;
+}
+
+.subDescription-yellow {
+  color: #daa520;
+}
+
+.subDescription-green {
+  color: #008000;
+}
+.subDescription-red {
+  color: #b22222;
+}
+
+.serviceDesc_itemDescription {
+  flex-basis: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serviceDesc_itemDescription__image {
+  border-radius: 5px;
+  width: 305px;
+  height: 190px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.service__item-btn {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f1be44;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  border: 2px solid #d09f00;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.switch-field {
+  display: flex;
+  overflow: hidden;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  background-color: #1e2021;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  padding: 11px 26px;
+  margin-right: -1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #323232;
+  box-shadow: none;
+  color: #f1be44;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.serviceDesc__price {
+  display: inline-block;
+  align-self: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.serviceDesc__priceNow {
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin: 0;
+}
+
+.serviceDesc__priceDiscount {
+  font-size: 20px;
+  color: #6c757d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.swiper-container {
+  max-width: 1220px;
+  height: 300px;
+}
+
+.swiper__image {
+  width: 305px;
+  height: 190px;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.swiper__image:hover {
+  -webkit-box-shadow: 0px 0px 35px -8px rgba(87, 87, 87, 1);
+  -moz-box-shadow: 0px 0px 35px -8px rgba(87, 87, 87, 1);
+  box-shadow: 0px 0px 35px -8px rgba(87, 87, 87, 1);
+}
+
+.seeAlso {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.seeAlso__title {
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #6e747d;
+}
+
+.swiper-pagination-bullet {
+  background-color: #6c757d;
+}
+
+.swiper-pagination-bullet {
+  background-color: #545b61;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.swiper-slide:hover {
+  cursor: pointer;
+}
+
+.swiper__image {
+  margin-bottom: 10px;
+}
+
+.swiper__title {
+  font-size: 18px;
+  color: #545b61;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.swiper__price {
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #f1be44;
+}
+
+.footer {
+  background: #333;
+  padding: 3em 0;
+}
+
+.footer-title h3 {
+  font-size: 1.5em;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.footer-top {
+  display: flex;
+}
+
+.container {
+  max-width: 1150px;
+}
+
+.amet-sed p {
+  margin: 2em 0 0 0;
+  color: #999999;
+  font-size: 0.9em;
+  line-height: 1.8em;
+}
+.amet-medium p a {
+  color: #ff9800;
+  text-decoration: none;
+}
+.amet-medium p a:hover {
+  color: #ffffff;
+}
+.amet-sed .w3social-icons {
+  margin-top: 1em;
+}
+.support input[type="email"] {
+  width: 65%;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  text-align: left;
+  font-weight: 400;
+  border: 2px solid #fff;
+  outline: none;
+  margin: 0;
+  -webkit-appearance: none;
+  background: #fff;
+}
+.support input[type="submit"] {
+  background: #ff9800;
+  cursor: pointer;
+  border: 2px solid #ff9800;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  -webkit-appearance: none;
+  outline: none;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.support input[type="submit"]:hover {
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.support {
+  margin: 1em 0 0 0;
+  background-color: rgb(45, 45, 45, 0.7);
+  padding: 1em 1em;
+}
+
+.support__form {
+  display: flex;
+  justify-content: flex-start;
+}
+/*-- social-icons --*/
+.agileinfo-social-grids {
+  margin: 2em 0 0 0;
+}
+.agileinfo-social-grids ul {
+  padding: 0;
+  margin: 0;
+}
+.agileinfo-social-grids ul li {
+  display: inline-block;
+}
+.agileinfo-social-grids ul li a {
+  color: #ffffff;
+  text-align: center;
+}
+.agileinfo-social-grids ul li a i.fa {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+.agileinfo-social-grids ul li a i.fa.fa-facebook:hover {
+  color: #3b5998;
+}
+.agileinfo-social-grids ul li a i.fa.fa-twitter {
+  margin: 0 1em;
+}
+.agileinfo-social-grids ul li a i.fa.fa-twitter:hover {
+  color: #55acee;
+}
+.agileinfo-social-grids ul li a i.fa.fa-rss {
+  margin: 0 1em 0 0;
+}
+.agileinfo-social-grids ul li a i.fa.fa-rss:hover {
+  color: #f26522;
+}
+.agileinfo-social-grids ul li a i.fa.fa-vk:hover {
+  color: #45668e;
+}
+
+@media (max-width: 1254px) {
+  .serviceDesc__wrapper {
+    max-width: 998px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .serviceDesc__otherItems {
+    display: none;
+  }
+  .serviceDesc__wrapper {
+    max-width: 770px;
+  }
+}
+
+@media (max-width: 917px) {
+  .serviceDesc__wrapper {
+    max-width: 773px;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .col917 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 813px) {
+  .serviceDesc__itemBlock {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .col917 {
+    max-width: 100%;
+  }
+  .serviceDesc_itemDescription__image {
+    width: 500px;
+    height: 311px;
+  }
+  .serviceDesc__wrapper {
+    max-width: 506px;
+  }
+  .serviceDesc_itemDescription {
+    margin-bottom: 40px;
+  }
+  .agileits-logo h1 a {
+    font-size: 1.5em;
+  }
+  .seeAlso {
+    margin-top: 12px;
+  }
+  .swiper__image {
+    width: 235px;
+    height: 157px;
+  }
+}
+
+@media (max-width: 537px) {
+  .serviceDesc__wrapper {
+    max-width: 273px;
+  }
+  .serviceDesc_itemDescription__image {
+    width: 259px;
+    height: 180px;
+  }
+  .serviceDesc_itemDescription {
+    align-items: flex-start;
+  }
+  .swiper__image {
+    width: 100%;
+  }
+}
