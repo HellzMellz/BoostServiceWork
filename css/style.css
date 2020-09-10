@@ -16,21 +16,36 @@ html,
 body {
   font-size: 100%;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 body {
   background: #ffffff;
 }
 .banner {
+  position: relative;
+}
+.banner__img {
   background: url(../images/1.jpg) no-repeat 0px 0px;
   background-size: cover;
+  top: -35%;
+  left: -10%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.banner__dots {
+  background: url(../images/dott.png) repeat;
+  background-size: 2px;
+  top: -10%;
+  left: -10%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
 .agileinfo-dot {
-  background: url(../images/dott.png) repeat 0px 0px;
-  background-size: 2px;
-  -webkit-background-size: 2px;
-  -moz-background-size: 2px;
-  -o-background-size: 2px;
-  -ms-background-size: 2px;
   padding: 3em 0;
 }
 .jarallax {
@@ -357,6 +372,7 @@ body {
 .blog,
 .mail {
   padding: 4em 0;
+  background-color: #fff;
 }
 .welcome {
   border-bottom: 1px dashed #ccc;
@@ -992,12 +1008,12 @@ ul.simplefilter {
   border: 2px solid #212121;
   background: none;
 }
-.input {
+.input.input--jiro {
   position: relative;
   z-index: 1;
   display: inline-block;
   margin: 1em;
-  max-width: 30%;
+  max-width: 47%;
   width: calc(100% - 2em);
   vertical-align: top;
 }
@@ -1140,11 +1156,17 @@ ul.simplefilter {
   padding: 0;
 }
 .address-row {
-  margin-top: 3em;
+  margin-bottom: 1.5em;
 }
+
+.address-row:last-child {
+  margin-bottom: 0em;
+}
+
 .contact-w3lsright {
-  padding: 6em 6em;
-  background: #ececec;
+  padding: 3em 3em;
+  width: 100%;
+  height: 250px;
 }
 .contact-w3lsright h6 {
   line-height: 1.5em;
@@ -1166,8 +1188,8 @@ ul.simplefilter {
 .address-row span.glyphicon {
   font-size: 1em;
   border: 1px solid #afafaf;
-  padding: 1.6em 1em;
-  color: #212121;
+  padding: 1.4em 1.4em;
+  color: #ff9800;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -1184,10 +1206,11 @@ ul.simplefilter {
   -ms-transform: rotatey(360deg);
 }
 .address-row h5 {
-  font-size: 1em;
-  color: #212121;
-  margin: 0 0 1em 0;
-  font-weight: 600;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin: 0 0 0.5em 0;
+  font-weight: 400;
+  font-family: "Roboto Condensed", sans-serif;
 }
 .address-right p {
   color: #999999;
@@ -1212,7 +1235,7 @@ ul.simplefilter {
 /*-- footer --*/
 .footer {
   background: #333;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 .footer-title h3 {
   font-size: 1.5em;
@@ -1223,7 +1246,7 @@ ul.simplefilter {
   font-family: "Roboto Condensed", sans-serif;
 }
 .amet-sed p {
-  margin: 2em 0 0 0;
+  margin: 0em 0 0 0;
   color: #999999;
   font-size: 0.9em;
   line-height: 1.8em;
@@ -1276,6 +1299,29 @@ ul.simplefilter {
   margin: 1em 0em 0 0;
   background-color: rgb(45, 45, 45);
   padding: 1em 1em;
+}
+
+.col-xs-6 {
+  width: 100%;
+}
+
+.footer-info:last-child {
+  margin-bottom: 0;
+}
+
+.foot-cont {
+  margin-right: 3%;
+  margin-left: 3%;
+  width: 90%;
+  justify-content: flex-start;
+}
+
+.amet-sed {
+  width: 25%;
+}
+
+.support-form {
+  display: flex;
 }
 /*-- social-icons --*/
 .agileinfo-social-grids {
@@ -1362,10 +1408,6 @@ ul.simplefilter {
   filter: alpha(opacity=0);
 }
 /*-- //to-top --*/
-body {
-  overflow-x: hidden;
-  background-color: #fff;
-}
 
 ol {
   margin-block-start: 0em;
@@ -1671,6 +1713,15 @@ ol {
   color: #f1be44;
 }
 /*-- responsive --*/
+@media (max-width: 1200px) {
+  .input.input--jiro {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .input.input--jiro:first-child {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 1080px) {
   .w3about-text {
     width: 63%;
@@ -1762,6 +1813,9 @@ ol {
   }
 }
 @media (max-width: 736px) {
+  .banner_text h3 {
+    font-size: 3em;
+  }
   .agileits-logo h1 a {
     font-size: 1.5em;
   }
@@ -1827,9 +1881,6 @@ ol {
   }
 }
 @media (max-width: 600px) {
-  .banner_text h3 {
-    font-size: 4em;
-  }
   .w3layouts-banner-info {
     padding: 4em 0;
   }
@@ -1859,8 +1910,14 @@ ol {
   .support input[type="email"] {
     width: 75%;
   }
+  .banner_text h3 {
+    font-size: 2.5em;
+  }
 }
 @media (max-width: 480px) {
+  .banner_text h3 {
+    font-size: 1.7em;
+  }
   .agileits-logo h1 a {
     font-size: 1.2em;
   }
@@ -1926,8 +1983,8 @@ ol {
   }
 }
 @media (max-width: 414px) {
-  .banner_text h3 {
-    font-size: 3em;
+  .input.input--jiro {
+    margin-bottom: 20px;
   }
   .w3about-img {
     min-height: 22em;
@@ -1949,6 +2006,9 @@ ol {
   .blog,
   .mail {
     padding: 2em 0;
+  }
+  .portfolio {
+    margin-bottom: 20px;
   }
   .markets-grids,
   .agileits-feedback-grids,
