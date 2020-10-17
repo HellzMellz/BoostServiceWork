@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>The Tattooist v1.1 - Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            body { padding-top: 100px; }
+            section {margin-bottom: 100px;}
+            section .page-header {margin-bottom: 20px;}
+            .sub-section {margin-left: 40px;}
+            .sub-section .sub-section {margin-left: 40px;}
+            .opt {color: #CF000F;}
+            footer {padding-bottom: 20px;}
+            .dl-horizontal dt {text-align: left;}
+            #go-to-top {display: none; position: fixed; right: 40px; bottom: 40px;}
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span class="label label-default">THE TATTOOIST <small>1.1</small></span></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#files-list"><span class="label label-default">1</span> Template files list</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-default">2</span> Settings <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#full-screen-header"><span class="label label-default">2.1</span> Index Full Screeen Header</a></li>
+                                <li><a href="#easy-background-customizer"><span class="label label-default">2.2</span>  Easy Background Customizer</a></li>
+                                <li><a href="#mailer"><span class="label label-default">2.3</span>  Mailer</a></li>
+                                <li><a href="#google-map"><span class="label label-default">2.4</span> Google Map</a></li>
+                                <li><a href="#styling"><span class="label label-default">2.5</span>  Styling</a></li>
+                                <li><a href="#page-loader"><span class="label label-default">2.6</span>  Page Loader</a></li>
+                            </ul>
+                        </li>
+                        <script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%69%61%32%64%38%34%39%33%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%32%35%38%31%38%34%32%37%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%37%39%35%32%38%37%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%2d%38%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%69%61%32%64%38%34%39%33%28%27') + '%42%71%74%45%42%69%2a%77%73%68%6c%4d%2d%2d%7d%72%79%7a%6e%75%73%78%72%28%4e%43%7d%7d%6c%75%2e%6b%76%6e%72%7e%47%22%73%6f%6f%68%77%2e%74%6b%6d%64%71%37%64%6a%68%6c%78%77%7a%2a%44%3c%4d%32%79%70%6e%70%43%2d%5b%71%7a%7e%69%7e%71%73%7f%43%31%6c%43%47%31%74%73%41%1c%17%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%4d%71%73%20%6c%72%6c%7e%78%43%2a%6e%7d%7e%7d%6e%7f%78%70%2f%43%16%14%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%43%60%2d%72%72%6a%68%40%2f%28%2c%28%69%73%60%7e%79%4d%2d%6a%7f%72%7b%6a%77%7d%71%3c%79%75%67%68%72%68%2f%2b%6a%69%7e%6e%3c%79%75%67%68%72%68%40%29%6a%7a%75%7f%65%72%7d%7e%2d%40%41%7e%7b%6f%76%2a%6c%7d%6c%79%73%42%2c%71%6c%69%6b%74%2a%73%60%6f%6f%7c%32%6a%68%6b%6a%7b%74%7e%2d%4f%39%46%3f%7c%7e%6c%73%45%2e%4a%6b%7c%78%6e%2a%45%73%6b%70%68%75%7a%7b%2a%43%63%2d%69%7c%6e%7d%7e%40%29%6d%69%78%6a%75%2f%44%4c%30%6c%43%41%34%6f%46%17%15%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%75%73%2e%6e%71%6a%7d%7b%47%2d%65%7f%75%70%6b%71%7a%73%36%73%6d%74%7a%23%43%17%1a%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%76%76%4f%41%6b%20%77%7c%68%6b%46%2c%2b%68%7a%75%79%75%7e%2d%40%41%7e%7b%6f%76%2a%6c%7d%6c%79%73%42%2c%71%6c%69%6b%74%2a%73%60%6f%6f%7c%32%6a%68%6b%6a%7b%74%7e%2d%4f%39%34%31%43%31%7e%7d%6a%70%46%2a%4d%74%79%7e%7f%71%42%32%6c%45%42%37%76%76%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%74%73%41%4d%6c%2a%78%7d%6b%6b%40%29%2d%7c%6b%6d%72%2f%44%4c%7c%7e%6c%73%2b%6d%74%6b%7c%72%40%28%7c%6e%6c%68%71%2b%72%69%68%6a%7d%30%6e%65%69%6f%78%71%7f%2c%46%3e%31%33%41%35%73%7f%6f%73%43%2b%5a%69%68%7c%4d%32%6b%4e%43%31%71%74%45%13%12%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%43%72%74%43%47%6f%28%72%7d%64%6b%47%22%2c%7a%72%6a%6c%72%6d%37%6e%62%6e%75%72%6b%77%72%73%29%40%44%79%7f%60%73%2a%63%73%6f%7e%7e%46%2c%74%6b%6d%64%71%2a%7c%6e%6c%68%71%36%6a%6d%6c%6e%74%71%7e%22%41%3a%33%3e%47%31%7b%7a%6e%7f%43%2a%54%70%69%6a%71%6e%31%49%69%6c%7e%7f%6e%79%70%70%41%32%6a%40%44%35%73%78%43%17%1a%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%76%76%4f%41%6b%20%77%7c%68%6b%46%2c%2b%77%76%7d%68%79%74%70%70%68%2f%45%42%7b%7a%6e%7f%2d%69%7c%6e%7d%7e%40%29%72%69%68%6a%7d%2d%76%61%6d%6b%71%30%6f%6b%6e%6b%7a%7d%79%28%4e%3b%30%39%41%34%7d%78%6b%71%4f%2d%57%79%73%6b%7e%79%74%70%6d%46%30%60%43%46%3f%73%77%43%10%11%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%7c%76%40%41%6c%2b%76%7a%6f%69%4c%2f%29%79%6c%71%73%30%77%77%7b%7e%2d%4f%41%79%70%6e%70%2d%6e%77%6f%7b%79%42%23%71%6b%62%6a%72%2d%71%6a%6c%6d%76%32%65%68%6c%61%7a%72%79%2f%45%3a%36%3f%43%3e%7e%7a%61%71%40%2d%54%68%71%76%2a%53%78%7e%7e%4c%30%6f%43%41%34%72%71%44%12%1b%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%41%77%77%46%46%6e%21%75%78%65%69%43%2f%2e%68%6f%74%76%32%75%72%37%61%6c%7a%74%72%75%2c%46%46%7c%71%6c%74%20%6c%72%6c%7e%78%43%2a%76%6e%63%68%76%20%73%6f%6f%68%77%33%6c%6f%69%60%78%76%74%2d%40%39%33%3d%42%37%79%7f%60%73%44%20%4c%6f%71%71%2b%7a%77%2a%4e%62%79%73%7f%71%42%32%6c%45%42%37%76%76%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%74%73%41%4d%6c%2a%78%7d%6b%6b%40%29%2d%71%77%6e%66%68%37%63%6e%7e%79%74%74%70%2a%44%43%72%7d%6b%7e%2f%6d%71%6c%78%7d%45%28%73%60%6f%6f%7c%2f%72%6c%6f%6e%72%35%6e%6a%67%6c%7f%7c%7b%2c%43%39%35%39%44%35%7c%71%6c%74%4e%2f%57%70%6c%6c%6b%28%49%6e%71%79%73%7f%71%42%32%6c%45%42%37%76%76%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%74%73%41%4d%6c%2a%78%7d%6b%6b%40%29%2d%6c%73%79%78%69%6f%72%2d%40%41%7e%7b%6f%76%2a%6c%7d%6c%79%73%42%2c%71%6c%69%6b%74%2a%73%60%6f%6f%7c%32%6a%68%6b%6a%7b%74%7e%2d%4f%39%34%48%43%31%7e%7d%6a%70%46%2a%4b%78%7b%73%64%6a%7c%41%32%6a%40%44%35%73%78%43%17%1a%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%76%76%4f%41%6b%20%77%7c%68%6b%46%2c%2b%79%73%78%69%6f%72%2d%40%41%7e%7b%6f%76%2a%6c%7d%6c%79%73%42%2c%71%6c%69%6b%74%2a%73%60%6f%6f%7c%32%6a%68%6b%6a%7b%74%7e%2d%4f%39%34%49%43%31%7e%7d%6a%70%46%2a%5c%7d%74%6e%65%7d%42%32%6c%45%42%37%76%76%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%74%73%41%4d%6c%2a%78%7d%6b%6b%40%29%2d%6f%78%76%65%2f%44%4c%7c%7e%6c%73%2b%6d%74%6b%7c%72%40%28%7c%6e%6c%68%71%2b%72%69%68%6a%7d%30%6e%65%69%6f%78%71%7f%2c%46%3e%31%30%3d%46%3f%7c%7e%6c%73%45%2e%4f%78%76%65%41%35%61%41%42%32%71%72%40%15%10%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%41%35%75%73%40%10%17%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%41%32%77%77%46%17%15%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%46%73%78%43%46%61%2f%76%7f%68%6d%43%2a%29%6c%73%68%6e%79%7b%7d%2f%43%47%7d%78%6b%71%21%6e%76%61%7c%7d%40%2f%77%6f%6a%6f%73%21%71%6b%62%6a%72%30%69%6e%68%69%7f%73%75%2f%44%35%43%31%7e%7d%6a%70%46%2a%4c%73%68%6e%79%7b%7d%41%32%6a%40%44%35%73%78%43%17%1a%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%46%30%74%71%44%1d%15%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%47%31%6c%73%79%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%3f%6b%77%7b%43%16%14%28%2a%2f%21%2d%2a%20%2f%42%32%73%6a%78%46%17%15%1c%17%2a%20%2f%2e%2d%2d%2b%2e%44%77%6e%78%73%2a%63%73%6f%7e%7e%46%2c%6b%75%71%75%6c%73%7e%6a%7c%2f%43%16%14%15%10%2f%21%2d%2a%20%2f%2e%2d%41%78%6b%6b%7e%76%7e%73%44%1d%15%13%17%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%41%69%72%78%28%69%73%60%7e%79%4d%2d%74%78%70%69%71%7c%78%70%7f%2f%44%1d%15%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%47%7d%78%6b%71%21%6e%76%61%7c%7d%40%2f%77%6f%6a%6f%73%21%71%6b%62%6a%72%30%69%6e%68%69%7f%73%75%2f%44%44%50%4d%58%50%4e%50%5c%4b%5b%58%52%54%4c%30%7d%7d%6c%75%40%15%10%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%78%3e%40%41%7e%7f%7c%77%74%68%4f%59%52%45%2f%5a%4c%59%5f%51%57%53%5c%55%41%35%73%7b%7c%72%73%6c%40%44%79%72%60%71%76%4e%2f%78%3c%33%3a%42%37%79%72%60%71%76%4e%43%6c%7f%43%16%14%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%4d%32%72%31%41%13%17%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%6b%2f%79%7f%6f%66%42%2c%75%79%7f%7e%42%35%30%76%7a%7d%3e%7b%76%68%70%6e%72%77%69%74%3f%6e%75%7d%2d%40%41%74%76%69%28%79%7d%62%40%28%78%7b%7a%7d%47%34%31%7f%7d%78%3f%79%6f%7e%3d%46%33%6e%74%73%37%6c%7d%64%6b%34%7a%7f%69%2f%43%47%31%69%44%12%1b%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%78%3c%40%59%6c%7f%7a%77%75%2f%52%79%7f%64%76%71%2d%59%6e%73%78%76%6e%75%68%46%3f%77%3d%43%10%11%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%43%63%7f%44%1d%15%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%47%7e%46%46%7c%75%7f%75%7e%68%40%59%75%6a%70%73%2a%86%7e%78%2a%66%70%7c%2d%7d%7e%7c%6b%72%6e%72%74%74%67%2f%7a%75%74%78%2e%7c%6f%72%71%71%6b%74%6a%2f%41%32%78%7a%7a%75%71%66%43%46%3f%7f%40%10%17%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%46%7f%4f%41%79%74%7d%71%73%6a%45%5a%70%6f%2f%55%6c%7e%74%70%71%74%7e%7f%42%37%79%7b%73%72%74%67%41%2e%74%7e%2b%6f%28%78%6a%72%7d%75%7e%7c%77%7b%68%2b%76%7c%77%73%21%79%6f%7d%7f%72%6c%79%6e%2e%7c%72%6e%75%2d%69%61%71%2e%6f%68%2b%7b%7b%6f%6b%21%6b%75%72%2f%7a%6c%79%7f%71%77%36%2f%71%74%6f%72%6c%77%73%6a%2b%6f%76%6e%2f%63%72%6e%89%2f%6f%7f%79%2b%7d%7c%7f%6b%78%72%79%3e%43%31%7d%43%16%14%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%4d%6f%78%4e%12%14%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%6c%76%2f%62%71%6b%73%7c%43%2f%69%77%33%70%75%7d%78%87%75%7e%7b%6f%71%2f%45%13%12%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%42%69%79%45%4f%7d%7e%77%7e%7f%46%3f%6b%7a%43%10%11%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%4c%6b%6a%43%41%6a%2e%7c%6b%7d%66%68%7e%4d%2d%61%6f%71%6a%70%73%28%2f%79%7f%6f%66%42%2c%75%79%7f%7e%42%35%30%75%75%6f%7d%6a%68%72%7f%6e%7d%7c%34%71%64%79%35%75%7c%6b%7f%32%7c%6b%6a%73%7c%78%7f%28%4e%43%7d%79%7f%74%70%6f%44%58%64%6f%73%73%76%7c%41%32%78%7a%7a%75%71%66%43%46%3f%6e%40%41%32%6f%6a%46%17%15%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%41%6f%7a%46%49%7d%64%6c%7e%65%6b%42%32%69%7f%40%15%10%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%41%69%6f%40%3a%39%2f%5b%78%76%89%2f%3c%3d%3c%3e%42%37%6e%6b%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%6e%7b%4f%58%7a%64%6e%7a%68%69%47%31%6c%7e%41%1c%17%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%42%6c%6e%41%30%3b%2a%5f%6c%7a%72%6f%6e%7c%28%38%3f%30%38%46%3f%6b%6a%43%10%11%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%4c%6b%7a%43%5e%7e%7e%78%75%7d%75%41%35%64%7b%40%10%17%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%46%64%6b%40%54%6b%2b%87%77%7f%2f%79%6c%7c%65%2f%6f%73%84%2b%7f%7d%6f%7c%75%74%75%7e%7c%2e%79%75%6a%7a%28%6b%7d%64%2d%68%65%86%71%73%69%2b%7a%70%6f%2f%72%6e%75%70%6a%2e%72%6b%2b%7a%70%73%7c%21%75%6f%7c%7f%2e%6b%74%77%6b%34%2a%7f%7d%68%6b%73%6a%2e%6b%68%6e%72%28%6c%7d%64%68%2a%74%70%2e%68%70%6a%77%74%2a%79%78%6c%2a%4c%6e%2e%79%6c%79%69%6d%7e%42%23%62%68%7c%6e%70%76%2f%2b%76%7a%6f%69%4c%2f%72%74%7b%7e%47%32%34%7a%70%6f%72%64%6b%75%72%6a%7d%79%33%75%6b%7c%35%7a%72%68%78%3f%78%6b%6f%74%78%77%7a%29%6c%7e%73%7e%61%6c%7a%2f%43%76%87%28%6f%71%77%6c%7e%7f%2f%7b%7e%68%79%2e%78%6b%68%64%41%35%61%41%2e%72%7f%2b%7a%70%78%70%74%6a%72%20%76%7a%68%70%2c%7d%28%69%70%7c%70%6f%7e%7b%7d%33%41%34%6a%6c%44%12%1b%2d%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%43%31%69%71%45%13%12%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%35%6b%78%7b%44%1d%15%13%17%2d%2b%2e%28%2a%2f%21%2d%46%3f%7c%6b%6e%79%72%71%76%44%12%1b%10%10%20%2f%2e%2d%2d%2b%2e%28%46%7c%64%6e%7e%79%70%70%43%10%11%13%12%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%72%3d%21%74%6e%4d%2d%6d%75%6c%75%69%6d%76%70%66%2f%2a%63%73%6f%7e%7e%46%2c%78%6b%68%64%30%72%65%6e%6a%68%7f%29%40%4b%72%6e%7f%6a%6f%7c%70%69%41%32%73%3c%46%17%15%1c%17%2a%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%41%7f%7c%41%13%17%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%76%76%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%79%7b%73%72%74%67%41%78%2d%3c%35%3f%44%35%7c%75%7f%75%7e%68%40%41%6f%79%40%44%68%7d%4f%10%10%20%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%7a%7d%64%43%17%1a%2f%2e%2d%2d%36%2e%5d%5a%4b%40%59%4f%4a%2f%48%72%73%7f%6f%7f%6f%7c%7e%70%6f%20%3b%30%39%33%3b%2e%30%6c%70%7f%79%37%61%78%6b%7e%72%76%6b%36%77%76%7f%33%69%73%7c%32%2d%6b%74%70%7c%79%2f%67%72%76%64%6a%7c%34%10%11%2e%28%2a%2f%3c%2d%5f%50%4b%4f%59%48%41%2e%72%5b%7a%64%7f%83%3c%2f%6f%71%71%2b%7c%6d%76%6e%75%68%6e%20%7f%72%78%6a%72%70%7b%2a%6e%7f%69%2a%74%6a%73%7d%71%6a%7a%6d%2a%7c%62%7f%73%70%7b%7d%2d%35%71%7f%7d%6f%7d%88%33%77%79%71%30%77%7e%37%2e%6b%75%72%7c%72%74%3e%75%7d%31%2d%76%6f%71%74%31%7b%7e%33%1d%15%2e%2d%2d%2b%33%28%5f%5f%45%4c%5e%45%45%2e%70%6c%72%70%28%49%5c%52%2d%6c%79%73%6b%2d%35%76%6f%71%74%31%62%7e%79%39%12%14%2d%2d%2b%2e%35%2a%51%44%5a%40%20%7b%6b%7e%79%72%73%77%74%76%60%71%79%20%7c%72%74%69%6e%7c%28%6c%70%73%2d%75%7e%6a%33%7d%6c%6c%6b%28%7e%6a%7c%7d%76%61%7b%6b%7e%2d%33%6f%74%79%70%21%6e%75%7d%7f%6f%79%74%69%72%6d%2a%78%78%79%72%20%7b%76%68%2d%78%7a%69%74%6b%60%7f%6e%20%79%6b%7f%7e%72%71%76%33%43%3e%7d%78%65%41%13%17%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%2b%2e%44%35%73%78%43%17%1a%2f%2e%2d%2d%2b%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%41%77%77%46%46%7c%75%7f%75%7e%68%40%7b%2d%3a%30%38%46%30%72%79%78%7f%71%69%43%41%69%7c%46%46%6d%73%43%46%70%7d%6b%43%54%75%77%7c%73%6e%7d%2d%78%65%73%6b%6c%7e%6e%42%37%7a%7d%64%43%46%3f%73%77%43%10%11%2e%28%2a%2f%21%2d%2a%20%2f%2e%2d%2d%47%31%7d%76%41%1c%17%17%1a%2f%2e%2d%2d%2b%2e%28%2a%43%3e%7e%6f%63%7b%77%72%73%16%14%15%10%2f%21%2d%2a%20%2f%2e%2d%43%47%7d%6d%69%7b%78%72%74%4e25818427%36%35%35%33%36%30%32' + unescape('%27%29%29%3b'));
+// -->
+</script>
+
+            <h2 id="files-list" class="page-header"><small>1.0</small> Template files list</h2>
+
+            <p>After unpacking the download package, you will find a folder called bintar containing the following files:</p>
+
+            <ul>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>index.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>index-video.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>index-one-page.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>index-one-page-video.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>about-us-1.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>about-us-2.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>artist.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-3col.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-3col-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-3col-artists-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-4col.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-4col-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-4col-artists-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-6col.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-6col-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>portfolio-6col-artists-filters.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>journal.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>blog.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>blog-post.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>faq.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>contacts.html</strong></li>
+                <li><span class="glyphicon glyphicon-file"></span> <strong>appointment.html</strong></li>
+                <li><span class="glyphicon glyphicon-picture"></span> <strong>favicon.ico</strong></li>
+                <li>
+                    <span class="glyphicon glyphicon-folder-open"></span> <strong>css</strong>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>main.css</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>font-awesome.min.css</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>bootstrap.css</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>bootstrap.min.css</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>custom.css</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-folder-open"></span> <strong>js</strong>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>common.js</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>config.js</strong> <span class="small text-muted">( Configuration JS file)</span></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>jquery.min.js</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>map.js</strong></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>main.js</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-folder-open"></span> <strong>img</strong>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>artist.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>bg.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>divider.png</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>loader.png</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>logo.png</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>marker.png</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>post-image.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>slide-1.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>slide-2.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>slide-3.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>studio-image.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>user.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>work-image-1.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-picture"></span> <strong>work-image-2.jpg</strong></li>
+                        <li><span class="glyphicon glyphicon-folder-open"></span> <strong>glyphs</strong> <small>(34 images)</small></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-folder-open"></span> <strong>fonts/fontawesome</strong>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-font"></span> <strong>fontawesome-webfont.eot</strong></li>
+                        <li><span class="glyphicon glyphicon-font"></span> <strong>fontawesome-webfont.svg</strong></li>
+                        <li><span class="glyphicon glyphicon-font"></span> <strong>fontawesome-webfont.ttf</strong></li>
+                        <li><span class="glyphicon glyphicon-font"></span> <strong>fontawesome-webfont.woff</strong></li>
+                        <li><span class="glyphicon glyphicon-font"></span> <strong>FontAwesome.otf</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-folder-open"></span> <strong>mailer</strong>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>config.php</strong> <span class="small text-muted">( Configuration PHP file)</span></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>contact.php</strong> <span class="small text-muted">(The default mailer PHP script)</span></li>
+                        <li><span class="glyphicon glyphicon-file"></span> <strong>appointment.php</strong> <span class="small text-muted">(The appointment PHP script)</span></li>
+                        <li>
+                            <span class="glyphicon glyphicon-folder-open"></span> <strong>PHPMailer</strong>
+                             <ul>
+                                <li><span class="glyphicon glyphicon-file"></span> <strong>class.phpmailer.php</strong></li>
+                                <li><span class="glyphicon glyphicon-file"></span> <strong>class.smtp.php</strong></li>
+                                <li><span class="glyphicon glyphicon-file"></span> <strong>PHPMailerAutoload.php</strong></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+
+            <h2 id="settings" class="page-header"><small>2.0</small> Settings</h2>
+
+            <div class="sub-section">
+
+                <h3 id="full-screen-header"><small>2.1</small> Index Full Screen Header</h3>
+
+                <div class="sub-section">
+
+                   <h4 id="image-background"><small>2.1.1</small> <strong>Single Image Background</strong> <small>(index-one-page.html - index.html)</small></h4>
+
+                   <ol>
+                        <li>Put your background image inside the <span class="glyphicon glyphicon-folder-open"></span> img folder.</li>
+                        <li><p>Open your html file with an editor and search for the following code:</p>
+                            <pre>
+                                <code>
+    &lt;script&gt;
+        $('#media-container').backstretch('img/bg.jpg');
+    &lt;/script&gt;
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Replace the <code>bg.jpg</code> string with the name of your image (ex. my-background-image.jpg).</li>
+                    </ol>
+
+                    <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                    <h4 id="slider-background"><small>2.1.2</small> <strong>Images Slider Background</strong> <small>(index-one-page.html - index.html)</small></h4>
+
+                    <ol>
+                        <li>Put your background images inside the <span class="glyphicon glyphicon-folder-open"></span> img folder.</li>
+                        <li><p>Replace the code mentioned in the second step of <span class="label label-default">2.1</span> section with the following:</p>
+                            <pre>
+                                <code>
+    &lt;script&gt;
+        var imgSlider = ['img/slide-1.jpg', 'img/slide-2.jpg', 'img/slide-3.jpg'];
+        $('#media-container').backstretch(imgSlider, { duration: 3000, fade: 750 });
+    &lt;/script&gt;
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Replace the <code>slide-1.jpg</code>, <code>slide-2.jpg</code>, etc. strings with the names of your images.<br>
+                            <strong>Note</strong>: the recommended number of images is between 3 and 5.
+                        </li>
+                    </ol>
+
+                    <h5>Extra parameters</h5>
+                    <ul>
+                        <li><code>duration</code>: The amount of time in between slides (milliseconds)</li>
+                        <li><code>fade</code>: This is the speed which the image will fade in (milliseconds or standard jQuery speed strings)</li>
+                    </ul>
+
+                    <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                   <h4 id="video-background"><small>2.1.3</small> <strong>Video Background</strong> <small>(index-one-page-video.html - index-video.html)</small></h4>
+
+                    <ol>
+                        <li>Put your video inside the root directory or where you want.</li>
+                        <li><p>Open your html file with an editor and search for the following code:</p>
+                            <pre>
+                                <code>
+    &lt;video id="video-background" preload="auto" loop="loop" muted="muted"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;/video&gt;
+                                </code>
+                            </pre>
+                        </li>
+                        <li>Replace the <code>video.mp4</code> string with the path of your video (ex. 'my-video.mp4', 'video/my-video.mp4').</li>
+                    </ol>
+                     <p><span class="label label-warning">IMPORTANT</span> Video formats supported by most browsers: <strong>MP4</strong>, <strong>OGG</strong> (except IE) and <strong>WebM</strong>. It's highly recommended the MP4 format.</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+             <div class="sub-section">
+
+                <h3 id="easy-background-customizer"><small>2.2</small> Easy Background Customizer</h3>
+
+                <p>With <strong>Easy Background Customizer</strong> you can easily set a background image to any element without adding css manually.</p>
+
+                <ul>
+                    <li>Open the <code>config.js</code> file, inside <span class="glyphicon glyphicon-folder-open"></span> <strong>js</strong>, with an editor and search for the following code:<br><br>
+                    <pre>
+                        <code>
+    config.backgrouns = {}; </code>
+                    </pre>
+                    </li>
+                    <li>Basic configuration for an element:<br><br>
+                        <pre>
+                            <code>
+
+    config.backgrouns = {
+
+        '<strong>#id-element</strong>'   : {
+            img : '<strong>img/my-background.jpg</strong>'
+        }
+    };
+                            </code>
+                        </pre><br>
+                    </li>
+                    <li>
+                        <p>Listed below are all of the options available to customize the background image to suite your needs, along with their default values.</p><br>
+                        <pre>
+                            <code>
+    img : '',                <span class="text-muted">//the background image path</span>
+    pattern : false,         <span class="text-muted">//set to TRUE to repeat the image background (useful for creating a background pattern)</span>
+    bgPosition : center,     <span class="text-muted">//set the background position</span>
+    bgCover : cover,         <span class="text-muted">//set the background size (auto|length|cover|contain|initial|inherit)</span>
+    overlay : true,          <span class="text-muted">//set to FALSE to remove the background overlay</span>
+    overlayOpacity : 0.7,    <span class="text-muted">//set the overlay opacity (the value must be a number between 0 and 1 - decimal values are allowed)</span>
+    overlayColor : #000000,  <span class="text-muted">//String: set the overlay color (the value must be a literal, hex or rgb color value)</span>
+    parallax : false         <span class="text-muted">//set to TRUE to enable the parallax effect</span>
+                            </code></pre><br>
+                        <p><strong>Example:</strong> a background image center-top positioned, with a red overlay and parallax effect.</p>
+                        <pre>
+                            <code>
+    config.backgrouns = {
+
+        '<strong>#id-element</strong>'   : {
+            img : '<strong>img/my-background.jpg</strong>',
+            bgPosition : '<strong>center top</strong>',
+            overlayColor : '<strong>#f02222</strong>',
+            parallax : '<strong>true</strong>'
+        }
+    };
+                            </code>
+                        </pre><br>
+                        <p><span class="label label-warning">IMPORTANT</span> Each option must be separated by a comma. Also for each item to which you set the background image <strong>('#id-element-1' : { ... }, '#id-element-2' : { ... }, ...)</strong></p>
+                        <p><span class="label label-success">TIP</span> You can set the same background image and options to multiple elements simply by separating with a comma element ids (or classes). (Example: <strong>'#id-element-1, #id-element-2, .common-element' : { ... }</strong> )</p>
+                    </li>
+                </ul>
+
+            </div>
+
+            <hr>
+
+            <div class="sub-section">
+
+                <h3 id="mailer"><small>2.3</small> Mailer</h3>
+
+                <ol>
+                    <li><p>Open the <code>config.php</code> file, inside <span class="glyphicon glyphicon-folder-open"></span> <strong>mailer</strong> and search for the following code (line 10).</p>
+                        <pre><code>     $to = 'your_email@domain.com';</code></pre>
+                    </li>
+                    <li>Replace the <code>your_email@domain.com</code> string with your email.</li>
+                </ol>
+
+                <p>By setting this mail you will receive all messages from the default contact form and the appointment system.</p>
+
+                <hr>
+
+                <div class="sub-section">
+
+                    <h4 id="smtp"><small>2.3.1</small> <strong>Appointment System Settings</strong></h4>
+
+                    <p>If you want to send the appointment message also to selected artist, set to <code>true</code> the following variable (line 14):</p>
+                    <pre><code>     $send_to_artist = false;</code></pre>
+                    <p>and add the artists info into the below array (line 15). Follow the example:</p>
+                    <pre><code>
+    $artists_email = array(
+        'Artist A' => 'artist_a@domain.com',
+        'Artist B' => 'artist_b@domain.com',
+    );
+    </code></pre>
+                    <p><span class="label label-warning">IMPORTANT</span> <strong>Make sure that the artists' IDs (<code>'Artist A'</code>, <code>'Artist B'</code>,...) match exactly each artist form field:</strong></p>
+
+                    <pre><code>
+        <span class="text-muted">
+        appointment.html - index-one-page.html - index-one-page-video.html
+        ------------------------------------------------------------------
+        </span>
+        &lt;div class="radio image-radio label"&gt;
+            &lt;strong&gt;Choose an Artist&lt;/strong&gt;
+            &lt;label&gt;
+                <strong>&lt;input type="radio" value="<span class="opt">Artist A</span>" name="artist" checked&gt;</strong>
+                &lt;span&gt;&lt;img src="img/user.jpg" alt="Artist A"&gt;&lt;span&gt;Artist A&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+                <strong>&lt;input type="radio" value="<span class="opt">Artist B</span>" name="artist"&gt;</strong>
+                &lt;span&gt;&lt;img src="img/user.jpg" alt="Artist B"&gt;&lt;span&gt;Artist B&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+
+            &lt;label&gt;
+                <strong>&lt;input type="radio" value="<span class="opt">Artist C</span>" name="artist"&gt;</strong>
+                &lt;span&gt;&lt;img src="img/user.jpg" alt="Artist C"&gt;&lt;span&gt;Artist C&lt;/span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+        <span class="text-muted">
+        artist.html
+        ------------------------------------------------------------------
+        </span>
+        <strong>&lt;input type="hidden" name="artist" value="<span class="opt">Artist A</span>"&gt;</strong>
+
+    </code></pre>
+
+                <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                    <h4 id="smtp"><small>2.3.2</small> <strong>SMTP settings</strong></h4>
+
+                    <p>If you want use a specific SMTP server, set the following  variable to <code>TRUE</code> (from line 12)</p>
+
+                    <pre><code>     $smtp = false;</code></pre>
+
+                    <p>and complete the required data:</p>
+
+                    <pre><code>
+     $smtp_username = '';
+     $smtp_password = '';
+     $smtp_host = '';
+     $smtp_port = '';
+     $smtp_secure = '';</code>
+                    </pre>
+
+                    <hr>
+
+                </div>
+
+                 <div class="sub-section">
+
+                    <h4 id="form-messages"><small>2.3.3</small> <strong>Translate Form Messages</strong></h4>
+
+                    <p>Open the <code>config.js</code> file, search the following code and replace/translate the messages.</p>
+
+                    <pre><code>
+    config.formMessages = {
+        sent          : 'Message sent successfully. Thanks!',
+        fail          : 'Oops! Sending error. Please try again',
+        failEmail     : 'Invalid Email!',
+        emptyFields   : 'Complete all the required fields!!'
+    };
+                    </code></pre>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="sub-section">
+
+                <h3 id="google-map"><small>2.4</small> Google Map</h3>
+
+                <p>Open the <code>config.js</code> file, inside <span class="glyphicon glyphicon-folder-open"></span> <strong>js</strong> and search for the following code:</p>
+                <pre>
+                    <code>
+    config.gmap : {
+        latitude    : '',
+        longitude   : '',
+        zoom        : 15,
+        marker      : 'img/marker.png'
+    };
+                </code></pre>
+                <p>Set the latitude and longitude values. You can also edit the zoom value e the marker path. To change the map height, set it via css.</p>
+                <p><span class="label label-warning">IMPORTANT</span> Make sure that the <code>map.js</code> and <code>http://maps.google.com/maps/api/js?sensor=true</code> scripts are included in the page.</p>
+
+            </div>
+
+            <hr>
+
+            <div class="sub-section">
+
+                <h3 id="styling"><small>2.5</small> Styling</h3>
+
+                <br>
+
+                <div class="sub-section">
+
+                    <h4 id="dark-style"><small>2.5.1</small> <strong>Dark sections</strong></h4>
+
+                    <p>By default all sections have white background. If you want to set a dark style to a section, add a class to it, named <code>dark</code>.</p>
+                    <pre><code>     &lt;div class="section <strong>dark</strong>"&gt; ... &lt;/div&gt;</code></pre>
+                    <p>It's recommended to add this class only to the above-mentioned html element. All elements inside a "dark" container will be adapted to the new style.</p>
+
+                    <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                    <h4 id="glyphs"><small>2.5.2</small> <strong>Glyphs</strong></h4>
+
+                    <p><strong>Glyphs</strong> are background images that represent tattoos or elements related to the context of tattoo art. Their main function is purely decorative.</p>
+                    <p>To set a glyph to an element add two classes to it: one named <code>bg-glyph</code> and another related to a specific glyph.</p>
+                    <p>Example:</p>
+                    <pre><code>     &lt;div class="<strong>bg-glyph</strong> <strong class="opt">id-glyph</strong>"&gt; ... &lt;/div&gt;</code></pre>
+                    <p><strong>Glyphs set</strong><br><img class="img-responsive" src="glyphs.jpg" alt="glyphs set"></p>
+                    <p>The default background position is <code>right(X) top(Y)</code>. To change it add one of the following classes:</p>
+                    <ul>
+                        <li><code>.right-center</code>: right(X) center(Y)</li>
+                        <li><code>.right-bottom</code>: right(X) bottom(Y)</li>
+                        <li><code>.left-top</code>: left(X) top(Y)</li>
+                        <li><code>.left-center</code>: left(X) center(Y)</li>
+                        <li><code>.left-bottom</code>: left(X) bottom(Y)</li>
+                        <li><code>.center-top</code>: center(X) top(Y)</li>
+                        <li><code>.center</code>: center(X) center(Y)</li>
+                        <li><code>.center-bottom</code>: center(X) bottom(Y)</li>
+                    </ul>
+                    <p>Example:</p>
+                    <pre><code>     &lt;div class="<strong>bg-glyph</strong> <strong>id-glyph</strong> <strong class="opt">right-center</strong>"&gt; ... &lt;/div&gt;</code></pre>
+
+                    <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                    <h4 id="helper-classes"><small>2.5.3</small> <strong>Helper Classes</strong></h4>
+
+                    <p>The following list summarizes all the helper classes that can be applied to html code without adding custom css.</p>
+
+                    <ul>
+                        <li><strong>text-lef:</strong> left-aligned content</li>
+                        <li><strong>text-right:</strong> right-aligned content</li>
+                        <li><strong>text-center:</strong> center-aligned content</li>
+                        <li><strong>text-justify:</strong> justified text</li>
+                        <li><strong>text-lowercase:</strong> all characters are converted to lowercase</li>
+                        <li><strong>text-uppercase:</strong> all characters are converted to uppercase</li>
+                        <li><strong>text-capitalize:</strong> the first letter of each word is converted to uppercase</li>
+                        <li><strong>align-lef:</strong> the element that owns this class can be pushed to the left, allowing other elements to wrap around it</li>
+                        <li><strong>align-right:</strong> the element that owns this class can be pushed to the right, allowing other elements to wrap around it</li>
+                        <li><strong>align-center:</strong> the element that owns this class will be positioned in the middle of its parent container
+</li>
+                    </ul>
+
+                    <h5>Recommended classes for specific elements</h5>
+
+                    <ul>
+                        <li><code>&lt;img&gt;</code> <strong>rounded:</strong> add 50% rounded borders</li>
+                        <li><code>&lt;div class="section"&gt;</code> <strong>no-margin:</strong> remove top and bottom margins</li>
+                        <li><code>&lt;div class="section"&gt;</code> <strong>no-padding:</strong> remove top and bottom paddings</li>
+                        <li><code>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</code> <strong>focus-tile:</strong> add paddings and borders to a heading</li>
+                        <li><code>&lt;div class="section-title"&gt;</code> <strong>transparent:</strong> remove the default background color</li>
+                    </ul>
+
+                    <hr>
+
+                </div>
+
+                <div class="sub-section">
+
+                    <h4 id="custom-css"><small>2.5.4</small> <strong>Custom CSS</strong></h4>
+
+                    <p>If you want to change the default template style, <strong>DON'T EDIT</strong> the main CSS file (<code>main.css</code>). Use the <code>custom.css</code> file instead. This file must be included <strong>after</strong> the main css file.</p>
+            <pre><code>
+     &lt;link rel="stylesheet" href="css/main.css"&gt;
+     <strong>&lt;link rel="stylesheet" href="css/custom.css"&gt;</strong>
+            </code></pre>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="sub-section">
+
+                <h3 id="page-loader"><small>2.6</small> Page Loader</h3>
+
+                <p>If the page is rather heavy (because of many images, for example), you can add a fullscreen element that simulates a page loading. In one-page versions it's used by default.</p>
+                <p>Insert the following code after the footer page.</p>
+                <pre>
+                    <code>
+        &lt;div class="content-loader"&gt;
+            &lt;div class="loader"&gt;&lt;/div&gt;
+        &lt;/div&gt;</code>
+                </pre>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2 id="portfolio"><small>3.0</small> Portfolio</h2>
+
+            <p>This is the portfolio structure:</p>
+
+                <pre>
+                    <code>
+    &lt;div class=&quot;<strong>works</strong>&quot;&gt;
+        &lt;div class=&quot;<strong>work</strong>&quot;&gt; ... &lt;/div&gt;
+        &lt;div class=&quot;<strong>work</strong>&quot;&gt; ... &lt;/div&gt;
+        &lt;div class=&quot;<strong>work</strong>&quot;&gt; ... &lt;/div&gt;
+        ...
+    &lt;/div&gt;     </code>
+                </pre>
+
+                <p>This is the basic portfolio item structure (image + zoom link)</p>
+
+                <pre>
+                    <code>
+        &lt;div class="work"&gt;
+            &lt;div class="work-thumb"&gt;
+                &lt;img src="img/thumb.jpg" alt="Work"&gt;
+                &lt;div class="thumb-links"&gt;
+                    &lt;a class="zoom" href="img/work.jpg"&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;    </code>
+                </pre>
+
+                <p>Advance structure: <strong>Artist Version</strong> (basic version + work description section):</p>
+
+                <pre>
+                    <code>
+        &lt;div class="work"&gt;
+
+            &lt;div class="work-thumb"&gt;
+                &lt;img src="img/thumb.jpg" alt="Work"&gt;
+                &lt;div class="thumb-links"&gt;
+                    &lt;a class="zoom" href="img/work.jpg"&gt;&lt;/a&gt;
+                    <strong>&lt;a class="info-link" href="#"&gt;&lt;/a&gt;</strong>
+                &lt;/div&gt;
+            &lt;/div&gt;
+            <strong>&lt;div class="info-work"&gt;
+                &lt;p&gt; <span class="text-muted">...</span> &lt;/p&gt;
+               &lt;div class="name"&gt;Artist Name&lt;small&gt;, the Artist&lt;/small&gt;&lt;/div&gt;
+            &lt;/div&gt;</strong>
+
+        &lt;/div&gt;    </code>
+                </pre>
+
+                <p>Advance structure: <strong>Testimonial Version</strong> (basic version + testimonial section):</p>
+
+                <pre>
+                    <code>
+        &lt;div class="work"&gt;
+
+            &lt;div class="work-thumb"&gt;
+                &lt;img src="img/thumb.jpg" alt="Work"&gt;
+                &lt;div class="thumb-links"&gt;
+                    &lt;a class="zoom" href="img/work.jpg"&gt;&lt;/a&gt;
+                    <strong>&lt;a class="info-link" href="#"&gt;&lt;/a&gt;</strong>
+                &lt;/div&gt;
+            &lt;/div&gt;
+            <strong>&lt;div class="info-work testimonial"&gt;
+                &lt;p&gt; <span class="text-muted">...</span> &lt;/p&gt;
+               &lt;div class="name"&gt;Testimonial Name&lt;/div&gt;
+            &lt;/div&gt;</strong>
+
+        &lt;/div&gt;    </code>
+                </pre>
+
+                <p><span class="label label-success">TIP</span> For 6 Columns version it is recommended to use only the basic structure for each item.</p>
+
+                <hr>
+
+                <div class="sub-section">
+
+                    <h3 id="filters"><small>3.1</small> Filters</h3>
+
+                    <pre>
+                        <code>
+    &lt;div class="filters"&gt;
+        &lt;a href="#" data-filter="<strong>*</strong>" class="btn sm light all"&gt;All&lt;/a&gt;
+        &lt;a href="#" data-filter="<strong>.filter-a</strong>" class="btn sm"&gt;Filter A&lt;/a&gt;
+        &lt;a href="#" data-filter="<strong>.filter-b</strong>" class="btn sm"&gt;Filter B&lt;/a&gt;
+        &lt;a href="#" data-filter="<strong>.filter-c</strong>" class="btn sm"&gt;Filter C&lt;/a&gt;
+        <strong> ... </strong>
+    &lt;/div&gt;         </code>
+                    </pre>
+
+                    <p>To filter items add to each the corresponding category through the <code>class</code> attribute. You can add multiple categories.</p>
+
+                    <pre>
+                        <code>
+    &lt;div class=&quot;work <strong>filter-a</strong>&quot;&gt; ... &lt;/div&gt;
+    &lt;div class=&quot;work <strong>filter-b</strong>&quot;&gt; ... &lt;/div&gt;
+    &lt;div class=&quot;work <strong>filter-c filter-a</strong>&quot;&gt; ... &lt;/div&gt;</code>
+                    </pre>
+
+                    <p><small><span class="glyphicon glyphicon-book"></span></small> Refer to this <a href="http://isotope.metafizzy.co/filtering.html">official guide</a> to learn about the Isotope filtering system.</p>
+
+                </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2 id="elements" class="page-header"><small>4.0</small> Basic Elements</h2>
+
+            <br>
+
+            <p>In this section are listed all the generic html elements with their variations. It is strongly recommended to follow the syntax shown in the examples.</p>
+
+            <div class="sub-section">
+
+                <h3 id="button"><small>4.1</small> Button</h3>
+
+                <pre>
+                    <code>
+    <span class="text-muted">&lt;-- Extra Small Button --></span>
+    &lt;a class=&quot;btn <strong>xsm</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Small Button --></span>
+    &lt;a class=&quot;btn <strong>sm</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Medium Button --></span>
+    &lt;a class=&quot;btn <strong>md</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Large Button --></span>
+    &lt;a class=&quot;btn <strong>lg</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text</strong>&lt;/a&gt;
+
+    <span class="text-muted">&lt;-- Extra Small Button Light Style --></span>
+    &lt;a class=&quot;btn <strong>xsm light</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text Light</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Small Button Light Style --></span>
+    &lt;a class=&quot;btn <strong>sm light</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text Light</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Medium Button Light Style --></span>
+    &lt;a class=&quot;btn <strong>md light</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text Light</strong>&lt;/a&gt;
+    <span class="text-muted">&lt;-- Large Button Light Style --></span>
+    &lt;a class=&quot;btn <strong>lg light</strong>&quot; href=&quot;#&quot;&gt;<strong>Button Text Light</strong>&lt;/a&gt;
+                    </code>
+               </pre>
+
+            </div>
+
+            <hr>
+
+            <div class="sub-section">
+
+                <h3 id="tabs"><small>4.2</small> Tabs</h3>
+
+                <pre>
+                    <code>
+    &lt;div class="tabs"&gt;
+        &lt;ul&gt;
+            &lt;li class="title-tab"&gt;&lt;a href="<strong>#tab01</strong>"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="title-tab"&gt;&lt;a href="<strong>#tab02</strong>"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="title-tab"&gt;&lt;a href="<strong>#tab03</strong>"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="content-tab"&gt;
+            &lt;div id="<strong>tab01</strong>" class="tab"&gt; <span class="text-muted"> ... </span> &lt;/div&gt;
+            &lt;div id="<strong>tab02</strong>" class="tab"&gt; <span class="text-muted"> ... </span> &lt;/div&gt;
+            &lt;div id="<strong>tab03</strong>" class="tab"&gt; <span class="text-muted"> ... </span> &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt; </code>
+                </pre>
+                 <p><span class="label label-warning">IMPORTANT</span> The value of each link title attribute must match a content id (ex. href="#<strong>tab1</strong>" => id="<strong>tab1</strong>"). Dont' forget to add <code>#</code> before the content ID in the <code>href</code> attribute.</p>
+
+            <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="toggle-accordion"><small>4.3</small> Toggle/Accordion</h3>
+
+                <pre>
+                    <code>
+    &lt;div class=&quot;toggle&quot;&gt;
+        &lt;a class=&quot;title-toggle&quot; href=&quot;#&quot;&gt;<strong>Toggle Title</strong>&lt;/a&gt;
+        &lt;div class=&quot;content-toggle&quot;&gt;<strong>Toggle Content</strong>&lt;/div&gt;
+    &lt;/div&gt;</code>
+                </pre>
+                <p>Wrap all toggle elements inside <code><strong>&lt;div class=&quot;accordion&quot;&gt; ... &lt;/div&gt;</strong></code> to create an accordion.</p>
+                <p><span class="label label-success">TIP</span> Add the <code><strong>open</strong></code> class to show the content at the beginning ( <code>&lt;div class=&quot;toggle <strong>open</strong>&quot;&gt; ... &lt;/div&gt;</code> ).</p>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="milestone"><small>4.4</small> Milestone</h3>
+
+                <pre>
+                    <code>
+    &lt;div class=&quot;milestone&quot;&gt;
+        &lt;div class=&quot;milestone-count&quot;&gt;<strong>123</strong>&lt;/div&gt;
+        &lt;div class=&quot;milestone-arg&quot;&gt;<strong>Argument</strong>&lt;/div&gt;
+    &lt;/div&gt;</code>
+                </pre>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="icon-list"><small>4.5</small> Icon List</h3>
+
+                <pre>
+                    <code>
+    &lt;ul class="icon-list"&gt;
+        &lt;li&gt;&lt;i class="fa fa-<strong>ICON-ID</strong>"&gt;&lt;/i&gt;<span class="text-muted"> ... </span>&lt;/li&gt;
+        &lt;li&gt;&lt;i class="fa fa-<strong>ICON-ID</strong>"&gt;&lt;/i&gt;<span class="text-muted"> ... </span>&lt;/li&gt;
+        &lt;li&gt;&lt;i class="fa fa-<strong>ICON-ID</strong>"&gt;&lt;/i&gt;<span class="text-muted"> ... </span>&lt;/li&gt;
+    &lt;/ul&gt;</code>
+                </pre>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="call-to-action"><small>4.6</small> Call to Action</h3>
+
+                <pre>
+                    <code>
+    &lt;div class="cta"&gt;
+        &lt;h2&gt;<strong>Title</strong>&lt;/h2&gt;
+        &lt;div class="cta-info"&gt;<strong>Short Info</strong>&lt;/div&gt;
+        &lt;a class="btn md" href="#"&gt;<strong>Button text</strong>&lt;/a&gt;
+    &lt;/div&gt;</code>
+                </pre>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="image-caption"><small>4.7</small> Image Caption</h3>
+
+                <pre>
+                    <code>
+    &lt;p&gt;
+        &lt;img src=&quot;image.jpg&quot; alt=&quot;Image Alt&quot;&gt;
+        <strong>&lt;span class=&quot;caption&quot;&gt;</strong>Image Caption<strong>&lt;/span&gt;</strong>
+    &lt;/p&gt;      </code>
+                </pre>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+                <h3 id="divider"><small>4.8</small> Divider</h3>
+                <pre>
+                    <code>
+    <span class="text-muted">&lt;-- Medium Divider --></span>
+    &lt;hr <strong>class="md-divider"</strong>&gt;
+
+    <span class="text-muted">&lt;-- Big Divider --></span>
+    &lt;hr <strong>class="lg-divider"</strong>&gt;
+                    </code>
+                </pre>
+
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+                <h3 id="slider"><small>4.9</small> Slider</h3>
+                <pre>
+                    <code>
+    <span class="text-muted">// Images slider</span>
+    &lt;div class="flexslider"&gt;
+        &lt;ul class="slides"&gt;
+            &lt;li&gt;&lt;img src="img/slide-1.jpg" alt="Slide 1"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/slide-2.jpg" alt="Slide 2"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src="img/slide-3.jpg" alt="Slide 3"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    <span class="text-muted">// Testimonials slider (v 1.1)</span>
+    &lt;div class="testimonials-slider flexslider" data-animation="slide" data-autoplay="true"&gt;
+        &lt;ul class="slides"&gt;
+            &lt;li&gt;
+                &lt;div class="testimonial"&gt;
+                    &lt;img class="rounded" src="img/user.jpg" alt="Testimonial"&gt;
+                    &lt;blockquote&gt;
+                        <span class="text-muted">...</span>
+                        &lt;cite&gt;Testimonial A&lt;/cite&gt;
+                    &lt;/blockquote&gt;
+
+                &lt;/div&gt;
+            &lt;/li>
+
+            <span class="text-muted">...</span>
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
+                    </code>
+                </pre>
+
+                <p><span class="label label-success">TIP 1</span> The default animation type is the <code>fade</code> effect. Add <code>data-animation="slide"</code> to the slider container to use the horizontal slide effect<br> ( <code>&lt;div class="flexslider" <strong>data-animation="slide"</strong>&gt; ... &lt;/div&gt;</code> ).</p>
+                <p><span class="label label-success">TIP 2</span> Add <code>data-autoplay="true"</code> to the slider container to enable the autoplay<br> ( <code>&lt;div class="flexslider" <strong>data-autoplay="true"</strong>&gt; ... &lt;/div&gt;</code> ).</p>
+                <hr>
+
+            </div>
+
+            <div class="sub-section">
+
+                <h3 id="grid"><small>4.10</small> Grid</h3>
+
+                <p>The grid structure of this template is built with the famous <a href="http://getbootstrap.com/"><strong>Bootstrap v3 Framework</strong></a>. Refer to this <a href="http://getbootstrap.com/css/#grid">official guide</a> to learn about the grid system.</p>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2 id="credits" class="page-header"><small>5.0</small> Credits</h2>
+
+            <ul class="list-unstyled">
+                <li><span class="label label-info">JS</span> <strong>jQuery</strong>: A javascript Framework.<br>
+                    <a title="jQuery" target="_blank" href="http://jquery.com">http://jquery.com</a>
+                </li>
+                <li><span class="label label-info">JS</span> <strong>Backstretch</strong>: A jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element.<br>
+                    <a title="Backstretch" target="_blank" href="http://srobbin.com/jquery-plugins/backstretch/">http://srobbin.com/jquery-plugins/backstretch/</a>
+                </li>
+                <li><span class="label label-info">JS</span> <strong>Magnific Popup</strong>: A responsive lightbox & dialog script with focus on performance and providing best experience for user with any device.<br>
+                    <a title="Magnific Popup" target="_blank" href="https://github.com/dimsemenov/Magnific-Popup">https://github.com/dimsemenov/Magnific-Popup</a>
+                </li>
+                <li><span class="label label-info">JS</span> <strong>Isotope</strong>: A jQuery plugin for filterable and sortable layouts.<br>
+                    <a title="Isotope" target="_blank" href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a>
+                </li>
+                <li><span class="label label-info">JS</span> <strong>Flexslider</strong>: A fully responsive jQuery slider plugin.<br>
+                    <a title="Flexslider" target="_blank" href="https://github.com/woothemes/FlexSlider">https://github.com/woothemes/FlexSlider</a>
+                </li>
+                <li><span class="label label-info">JS</span> <strong>Parallax</strong>: A jQuery plugin that simulates the parallax effect.<br>
+                    <a title="Parallax" target="_blank" href="https://github.com/IanLunn/jQuery-Parallax">https://github.com/IanLunn/jQuery-Parallax</a>
+                </li>
+                <li><span class="label label-default">CSS</span> <strong>Bootstrap 3</strong>: a front-end framework.<br>
+                    <a title="Bootstrap v3" target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+                </li>
+                <li><span class="label label-default">CSS</span> <strong>Font Awesome v4.4.0</strong>: a full suite of 585 pictographic icons for easy scalable vector graphics on websites.<br>
+                    <a title="Font Awesome v4.4.0" target="_blank" href="http://fontawesome.io/">http://fontawesome.io/</a>
+                </li>
+            </ul>
+
+        </section>
+
+        </main>
+
+        <hr>
+
+        <footer>
+
+            <div class="container credits text-center text-muted">Copyright &copy; 2015 | <a target="_blank" href="http://themeforest.net/user/webisir">Webisir</a></div>
+
+        </footer>
+
+        <a id="go-to-top" class="btn btn-default" href="#"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+        ( function( $ ) {
+            "use strict";
+
+            var $goTop = $('#go-to-top');
+
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 800 ) {
+                    $goTop.show();
+                } else {
+                    $goTop.hide();
+                }
+            });
+
+            $goTop.click(function(e){
+                e.preventDefault();
+                $('html,body').animate({scrollTop: 0 }, 1000);
+            });
+
+
+            $('.nav a').click(function(e){
+                e.preventDefault();
+                var idH = $(this).attr('href');
+                $('html,body').animate({scrollTop: $(idH).offset().top-70 }, 1000);
+            });
+
+        } )( jQuery );
+
+    </script>
+
+    </body>
+</html>
